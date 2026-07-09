@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ========================================
     // Smooth Scroll Navigation
     // ========================================
-    const navItems = document.querySelectorAll('.nav-item');
+    const navItems = document.querySelectorAll('.hero-nav-item');
     const navItemsArray = Array.from(navItems);
 
     navItems.forEach(function (item) {
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Remove active class from all items
             navItemsArray.forEach(function (nav) {
-                nav.classList.remove('nav-item-active');
+                nav.classList.remove('active');
             });
 
             // Add active class to clicked item
-            this.classList.add('nav-item-active');
+            this.classList.add('active');
 
             // Get target section
             const targetId = this.getAttribute('href');
@@ -60,8 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ========================================
     // Update Active Nav Item on Scroll
     // ========================================
-    const sections_array = Array.from(document.querySelectorAll('.section, .hero, .footer'));
-    const sectionIds = ['hero', 'section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6', 'footer'];
+    const sectionIds = ['hero', 'section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6'];
 
     window.addEventListener('scroll', function () {
         let current = '';
